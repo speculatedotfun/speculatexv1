@@ -27,13 +27,6 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-
-    /* Test environment variables */
-    env: {
-      NODE_ENV: 'test',
-      NEXT_PUBLIC_CHAIN_ID: '97',
-      NEXT_PUBLIC_SUBGRAPH_URL: 'http://localhost:8000/subgraphs/name/test',
-    },
   },
 
   /* Configure projects for major browsers */
@@ -80,5 +73,10 @@ export default defineConfig({
     url: 'http://localhost:3003',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,
+    env: {
+      NODE_ENV: 'test',
+      NEXT_PUBLIC_CHAIN_ID: '97',
+      NEXT_PUBLIC_SUBGRAPH_URL: 'http://localhost:8000/subgraphs/name/test',
+    },
   },
 })
