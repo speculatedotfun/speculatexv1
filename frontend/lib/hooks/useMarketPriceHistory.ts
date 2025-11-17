@@ -181,7 +181,7 @@ export function useMarketPriceHistory(
 
     const snapshotPriceHistory =
       (snapshotData?.tradesAsc as SnapshotTrade[] | undefined)
-        ?.map((trade: SnapshotTrade | null) => {
+        ?.map((trade: SnapshotTrade | null): PricePoint | null => {
           if (
             !trade?.timestamp ||
             trade.priceE6 === null ||
@@ -194,12 +194,15 @@ export function useMarketPriceHistory(
           if (!Number.isFinite(timestamp) || timestamp <= 0 || !Number.isFinite(priceYesValue)) {
             return null;
           }
-          return {
+          const point: PricePoint = {
             timestamp,
             priceYes: Math.max(0, Math.min(1, priceYesValue)),
             priceNo: Math.max(0, Math.min(1, 1 - priceYesValue)),
-            txHash: trade.txHash ?? undefined,
           };
+          if (trade.txHash) {
+            point.txHash = trade.txHash;
+          }
+          return point;
         })
         .filter((point): point is PricePoint => point !== null) ?? [];
 
