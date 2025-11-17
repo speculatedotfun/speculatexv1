@@ -33,9 +33,9 @@ export function useMarketTransactions(
   useEffect(() => {
     if (!snapshotData) return;
     const tradesDesc = snapshotData.tradesDesc ?? [];
-    const txRows: TransactionRow[] = tradesDesc
-      .map(toTransactionRow)
-      .filter((tx): tx is TransactionRow => tx !== null);
+    const txRows: TransactionRow[] = (tradesDesc
+      .map(toTransactionRow) as (TransactionRow | null)[])
+      .filter((tx: TransactionRow | null): tx is TransactionRow => tx !== null);
 
     if (txRows.length > 0) {
       mergeTransactionRows(txRows);

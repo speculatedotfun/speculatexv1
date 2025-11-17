@@ -180,8 +180,8 @@ export function useMarketPriceHistory(
     if (historyLoading) return;
 
     const snapshotPriceHistory =
-      (snapshotData?.tradesAsc as (SnapshotTrade | null)[] | undefined)
-        ?.map((trade: SnapshotTrade | null): PricePoint | null => {
+      snapshotData?.tradesAsc
+        ?.map<PricePoint | null>((trade: SnapshotTrade | null) => {
           if (
             !trade?.timestamp ||
             trade.priceE6 === null ||
@@ -318,7 +318,7 @@ export function useMarketPriceHistory(
       const merged = Array.from(mergedDedup.values()).sort((a, b) => a.timestamp - b.timestamp);
       return withSeedPoint(merged, fallbackChartPointRef.current);
     });
-  }, [historyLoading, snapshotData?.tradesAsc]);
+  }, [historyLoading, snapshotData?.tradesAsc, marketCreatedAt, snapshotData?.createdAt]);
 
   // Store refs for stable event handler
   const marketIdNumRef = useRef(marketIdNum);
