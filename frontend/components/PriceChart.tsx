@@ -179,14 +179,6 @@ export const PriceChart = memo(function PriceChart({ data, selectedSide, height 
               return new Date(timestamp * 1000).toLocaleString();
             },
           },
-          watermark: {
-            visible: true,
-            fontSize: 48,
-            horzAlign: 'center',
-            vertAlign: 'center',
-            color: 'rgba(100, 116, 139, 0.05)',
-            text: 'SPECULATE',
-          },
           handleScroll: { mouseWheel: true, pressedMouseMove: true },
           handleScale: { axisPressedMouseMove: true, mouseWheel: true, pinch: true },
         });
