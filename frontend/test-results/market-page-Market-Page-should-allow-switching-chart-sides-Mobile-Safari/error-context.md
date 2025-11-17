@@ -1,0 +1,166 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8]
+  - alert [ref=e13]
+  - generic [ref=e15]:
+    - banner [ref=e16]:
+      - generic [ref=e18]:
+        - link "SpeculateX Logo" [ref=e19]:
+          - /url: /
+          - img "SpeculateX Logo" [ref=e20]
+        - generic [ref=e21]:
+          - button "Toggle menu" [ref=e22] [cursor=pointer]:
+            - img [ref=e23]
+          - button "Connect" [ref=e27] [cursor=pointer]:
+            - generic [ref=e28]: Connect
+    - generic [ref=e29]:
+      - link "BACK TO MARKETS" [ref=e31]:
+        - /url: /markets
+        - img [ref=e32]
+        - text: BACK TO MARKETS
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e37]: CLOSED
+          - generic [ref=e38]:
+            - button [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+            - button [ref=e42] [cursor=pointer]:
+              - img [ref=e43]
+        - generic [ref=e45]:
+          - img "test" [ref=e47]
+          - generic [ref=e48]:
+            - heading "test" [level=1] [ref=e49]
+            - generic [ref=e50]:
+              - generic [ref=e51]: Vol $615.41
+              - text: •
+              - generic [ref=e52]: Created —
+        - generic [ref=e53]:
+          - heading "Rules" [level=3] [ref=e54]
+          - paragraph [ref=e55]: This market will be resolved manually by the admin.
+      - generic [ref=e56]:
+        - generic [ref=e57]: Market resolved — trading is closed.
+        - generic [ref=e58]: "Winner: YES"
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - generic [ref=e63]: Market is resolved; trading is disabled.
+              - generic [ref=e64]:
+                - button "BUY" [disabled] [ref=e65]
+                - button "SELL" [disabled] [ref=e66]
+              - generic [ref=e67]:
+                - 'button "65.3¢ yes You have: 0" [disabled] [ref=e68]':
+                  - generic [ref=e69]: 65.3¢
+                  - generic [ref=e70]: "yes"
+                  - generic [ref=e71]: "You have: 0"
+                - 'button "34.7¢ no You have: 0" [disabled] [ref=e72]':
+                  - generic [ref=e73]: 34.7¢
+                  - generic [ref=e74]: "no"
+                  - generic [ref=e75]: "You have: 0"
+              - generic [ref=e76]: "USDC Balance: 0"
+              - textbox "0.0" [disabled] [ref=e77]
+              - generic [ref=e78]:
+                - button "10" [disabled] [ref=e79]
+                - button "50" [disabled] [ref=e80]
+                - button "100" [disabled] [ref=e81]
+                - button "Max" [disabled] [ref=e82]
+              - button "BUY" [disabled] [ref=e83]
+              - generic [ref=e84]:
+                - heading "Redeem Winnings" [level=3] [ref=e85]
+                - generic [ref=e86]:
+                  - 'button "Yes Balance: 0" [disabled] [ref=e87]':
+                    - generic [ref=e88]: "Yes"
+                    - generic [ref=e89]: "Balance: 0"
+                  - 'button "No Balance: 0" [disabled] [ref=e90]':
+                    - generic [ref=e91]: "No"
+                    - generic [ref=e92]: "Balance: 0"
+              - generic [ref=e93]:
+                - generic [ref=e94]:
+                  - heading "Provide Liquidity" [level=3] [ref=e95]
+                  - generic [ref=e96]: "Vault: $615.41"
+                - generic [ref=e97]:
+                  - generic [ref=e98]:
+                    - generic [ref=e99]: Your LP shares
+                    - generic [ref=e100]: 0.00 USDC (0.00%)
+                  - generic [ref=e101]:
+                    - generic [ref=e102]: Pending fees
+                    - generic [ref=e103]: $0.0000
+                  - generic [ref=e104]:
+                    - generic [ref=e105]: Pending residual
+                    - generic [ref=e106]: $0.0000
+                  - generic [ref=e107]:
+                    - generic [ref=e108]: Fee pool
+                    - generic [ref=e109]: $27.00
+                - generic [ref=e111]:
+                  - text: Add liquidity (USDC)
+                  - generic [ref=e112]:
+                    - textbox "0.0" [disabled] [ref=e113]
+                    - button "Max" [disabled] [ref=e114]
+                  - button "Add Liquidity" [disabled] [ref=e115]
+                - button "Claim All LP Rewards" [disabled] [ref=e116]
+            - generic [ref=e117]: Trading for this market is closed. The market has been resolved.
+          - generic [ref=e118]:
+            - generic [ref=e119]:
+              - generic [ref=e120]:
+                - generic [ref=e121]: Market Price (YES)
+                - generic [ref=e122]:
+                  - generic [ref=e123]: 65.3¢
+                  - generic [ref=e124]: ↑ 30.55%
+              - generic [ref=e125]:
+                - button "YES 65.3¢" [ref=e126] [cursor=pointer]:
+                  - generic [ref=e127]:
+                    - generic [ref=e128]: "YES"
+                    - generic [ref=e129]: 65.3¢
+                - button "NO 34.7¢" [ref=e130] [cursor=pointer]:
+                  - generic [ref=e131]:
+                    - generic [ref=e132]: "NO"
+                    - generic [ref=e133]: 34.7¢
+            - table [ref=e140]:
+              - row [ref=e141]:
+                - cell
+                - cell [ref=e142]:
+                  - link "Charting by TradingView" [ref=e146]:
+                    - /url: https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart&utm_source=localhost/markets/1
+                    - img [ref=e147]
+                - cell [ref=e152]
+              - row [ref=e156]:
+                - cell
+                - cell [ref=e157]
+                - cell [ref=e161]
+            - generic [ref=e164]:
+              - button "1D" [ref=e165] [cursor=pointer]
+              - button "1W" [ref=e166] [cursor=pointer]
+              - button "1M" [ref=e167] [cursor=pointer]
+              - button "ALL" [ref=e168] [cursor=pointer]
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - button "Position" [ref=e171] [cursor=pointer]
+              - button "Comments" [ref=e172] [cursor=pointer]
+              - button "Transactions" [ref=e173] [cursor=pointer]
+              - button "Resolution" [ref=e174] [cursor=pointer]: Resolution
+            - generic [ref=e177]:
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - img [ref=e180]
+                  - heading "Market Resolved" [level=4] [ref=e182]
+                - paragraph [ref=e183]: "Winner: YES"
+              - generic [ref=e184]:
+                - generic [ref=e185]:
+                  - generic [ref=e186]: Resolution Type
+                  - generic [ref=e187]: Manual
+                - generic [ref=e188]:
+                  - generic [ref=e189]: Resolution Date
+                  - generic [ref=e190]: Nov 13, 2025, 10:27 PM GMT+2
+                - generic [ref=e191]:
+                  - generic [ref=e192]: Winner
+                  - generic [ref=e193]: "YES"
+        - generic [ref=e195]:
+          - heading "Top Holders" [level=3] [ref=e196]
+          - generic [ref=e197]:
+            - button "YES" [ref=e198] [cursor=pointer]
+            - button "NO" [ref=e199] [cursor=pointer]
+          - generic [ref=e201]: No holders yet
+```

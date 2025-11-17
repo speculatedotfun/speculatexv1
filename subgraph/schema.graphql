@@ -1,0 +1,67 @@
+type Market @entity(immutable: false) {
+  id: ID!
+  yesToken: Bytes!
+  noToken: Bytes!
+  question: String!
+  initUsdc: BigInt!
+  expiryTimestamp: BigInt!
+  createdAt: BigInt!
+  blockNumber: BigInt!
+  txHash: Bytes!
+  totalVolumeUsdc: BigInt!
+  totalTokensYes: BigInt!
+  totalTokensNo: BigInt!
+  isResolved: Boolean!
+  yesWins: Boolean
+  resolutionTimestamp: BigInt
+  resolutionTxHash: Bytes
+  trades: [Trade!]! @derivedFrom(field: "market")
+  balances: [PositionBalance!]! @derivedFrom(field: "market")
+  redemptions: [Redemption!]! @derivedFrom(field: "market")
+}
+
+type Trade @entity(immutable: false) {
+  id: ID!
+  market: Market!
+  txHash: Bytes!
+  logIndex: BigInt!
+  blockNumber: BigInt!
+  timestamp: BigInt!
+  user: User!
+  action: String!
+  side: String!
+  tokenDelta: BigInt!
+  usdcDelta: BigInt!
+  priceE6: BigInt!
+}
+
+type PositionBalance @entity(immutable: false) {
+  id: ID!
+  market: Market!
+  user: User!
+  side: String!
+  tokenBalance: BigInt!
+}
+
+type Redemption @entity(immutable: false) {
+  id: ID!
+  market: Market!
+  user: User!
+  amount: BigInt!
+  txHash: Bytes!
+  blockNumber: BigInt!
+  timestamp: BigInt!
+}
+
+type User @entity(immutable: false) {
+  id: ID!
+  trades: [Trade!]! @derivedFrom(field: "user")
+  balances: [PositionBalance!]! @derivedFrom(field: "user")
+  redemptions: [Redemption!]! @derivedFrom(field: "user")
+}
+
+type GlobalState @entity(immutable: false) {
+  id: ID!
+  uniqueTraders: Int!
+}
+

@@ -1,0 +1,17 @@
+{
+  "name": "speculate-subgraph",
+  "version": "1.0.0",
+  "description": "Subgraph indexing SpeculateCore events on BSC Testnet",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "goldsky subgraph deploy speculate-core-v2/production --version v1.0.0"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-ts": "^0.32.0"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.61.0"
+  }
+}
+
