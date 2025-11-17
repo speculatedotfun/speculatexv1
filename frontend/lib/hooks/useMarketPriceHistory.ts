@@ -180,8 +180,8 @@ export function useMarketPriceHistory(
     if (historyLoading) return;
 
     const snapshotPriceHistory =
-      snapshotData?.tradesAsc
-        ?.map<PricePoint | null>((trade: SnapshotTrade | null) => {
+      (snapshotData?.tradesAsc as (SnapshotTrade | null)[] | undefined)
+        ?.map((trade: SnapshotTrade | null): PricePoint | null => {
           if (
             !trade?.timestamp ||
             trade.priceE6 === null ||
