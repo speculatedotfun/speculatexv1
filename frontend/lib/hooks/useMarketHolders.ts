@@ -16,13 +16,13 @@ export function useMarketHolders(
     const yesBalances = snapshotData.yesBalances ?? [];
     const yesHolders = yesBalances
       .map((balance: any) => toHolder(balance, priceYes))
-      .filter((holder): holder is Holder => holder !== null);
+      .filter((holder: Holder | null): holder is Holder => holder !== null);
     setTopHoldersYes(yesHolders);
 
     const noBalances = snapshotData.noBalances ?? [];
     const noHolders = noBalances
       .map((balance: any) => toHolder(balance, priceNo))
-      .filter((holder): holder is Holder => holder !== null);
+      .filter((holder: Holder | null): holder is Holder => holder !== null);
     setTopHoldersNo(noHolders);
   }, [snapshotData, priceYes, priceNo]);
 
